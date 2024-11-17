@@ -16,6 +16,7 @@ on:
         description: Branch to deploy
         type: string
         required: true
+        options: ${{ github.branches}}
         default: main
   
 jobs:
