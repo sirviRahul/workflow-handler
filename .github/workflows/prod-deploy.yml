@@ -1,0 +1,21 @@
+name: Prod Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Select a branch'
+        type: choice
+        required: true
+        options: 
+            - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy
+        run: |
+          # Add your deployment commands here
