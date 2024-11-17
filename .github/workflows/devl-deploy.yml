@@ -1,22 +1,12 @@
-name: Deploy
+name: Devl Deploy
 
 on:
   workflow_dispatch:
-    inputs:
-      environment:
-        description: Environment to deploy to
-        type: choice
-        required: true
-        options:
-          - devl
-          - prod
-          - test
-        default: devl
   
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy
+      - name: Deploy Devl 
         run: |
-          echo "Deploying"
+          echo "Deploying on devl environment"
