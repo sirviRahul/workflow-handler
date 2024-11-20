@@ -11,8 +11,8 @@ jobs:
       - name: Get AWS Credentails
         uses: aws-actions/configure-aws-credentials@v1
         with:  
-          aws-access-key-id: ${{ vars.AWS_ACCESS_KEY_ID }} 
-          aws-secret-access-key: ${{ vars.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ vars.key1 }} 
+          aws-secret-access-key: ${{ vars.val1 }}
           aws-region: us-east-1
       - name: Assume Role
         run: aws sts assume-role --role-arn arn:aws:iam::418295702768:role/LambdaRoleAdminAccess --role-session-name "test-session"
