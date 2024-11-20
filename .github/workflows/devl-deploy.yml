@@ -20,5 +20,5 @@ jobs:
         run: aws s3 ls
       - name: Deploy resources to  Devl
         run: |
-          aws cloudformation deploy --template-file infrastructure/samTemplates/workflow-gateway.yaml --stack-name my-stack --capabilities CAPABILITY_IAM
-
+          sam --version
+          sam deploy infrastructure/samTemplates/workflow-gateway.yaml --region us-east-1 --stack-name workflow-gateway --capabilities CAPABILITY_IAM
